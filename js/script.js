@@ -54,8 +54,13 @@ increaseButton.addEventListener('click', function() {
 
 decreaseButton.addEventListener('click', function() {
   let newMinutes = Number(displayMinutes.innerText) - 5
-  timer.updateMinutesDisplay(newMinutes)
-  timer.updateTotalMinutes('subtraction')
+  
+  if (newMinutes > 0) {
+    timer.updateMinutesDisplay(newMinutes)
+    timer.updateTotalMinutes('subtraction')
+  } else {
+    return
+  }
 })
 
 function resetControls() {
