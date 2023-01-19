@@ -24,7 +24,7 @@ export default function Timer({
   
       seconds--
       updateDisplay(minutes, seconds)
-    }, 50)
+    }, 1000)
   }
   
   function updateDisplay(minutes, seconds) {
