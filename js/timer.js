@@ -18,13 +18,13 @@ export default function Timer({
       }
   
       if (seconds <= 0) {
-        seconds = 60
+        seconds = 6
         minutes--
       }
   
       seconds--
       updateDisplay(minutes, seconds)
-    }, 1000)
+    }, 50)
   }
   
   function updateDisplay(minutes, seconds) {
